@@ -19,7 +19,7 @@ app.use(bodyParser.json());
 
 var cors = require('cors');
 var corsOption = {
-  origin: true,
+  origin: "*",
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
   credentials: true,
   exposedHeaders: ['x-auth-token']
