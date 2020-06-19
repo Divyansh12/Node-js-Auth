@@ -50,10 +50,16 @@ module.exports = {
   },
 
   sendToken: function(req, res) {
-    
+
+      if(req.register==false){
+        message='user found & logged in'
+      }
+      else{
+        message='user created'
+      }
       const accessToken= {  auth: true,
       token: req.token,
-      message: 'user found & logged in'}
+      message: message}
       
       res.setHeader('x-auth-token', req.token);
     return res.status(200).json(accessToken);

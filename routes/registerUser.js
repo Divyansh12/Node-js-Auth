@@ -54,7 +54,9 @@ router.post('/registerUser', async (req, res , next) => {
 
   console.log(userexists)
   if (userexists)
-    return res.status(400).send('Username already exists');
+    return res.status(400).send({
+      message: 'username already taken',
+    });
 
   //Hash password
   const salt = await bcrypt.genSalt(10);
