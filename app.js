@@ -65,6 +65,7 @@ app.get('/docs', (req, res) => {
 //Importing Routes
 const login = require('./routes/loginUser');
 const register = require('./routes/registerUser');
+const logout=require('./routes/logout')
 const forgetPassword = require('./routes/forgotPassword');
 const resetPassword = require('./routes/resetPassword')
 const updatePassword = require('./routes/updatePassword')
@@ -77,6 +78,7 @@ const user_logins = require('./routes/user_logins')
 //Using imported Routes
 app.use('/api/v1', login);
 app.use('/api/v1', register);
+app.use('/api/v1', logout);
 app.use('/api/v1', forgetPassword);
 app.use('/api/v1', resetPassword);
 app.use('/api/v1', updatePassword);
