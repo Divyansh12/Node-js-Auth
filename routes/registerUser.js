@@ -50,12 +50,12 @@ var { generateToken, sendToken } = require('../utils/token.utils');
 
 router.post('/registerUser', async (req, res , next) => {
 
-  const userexists = await User.findOne({ where: {username: req.body.username  } });
+  const userexists = await User.findOne({ where: {username: req.body.username ,email: req.body.email } });
 
   console.log(userexists)
   if (userexists)
     return res.status(400).send({
-      message: 'username already taken',
+      message: 'username or email already taken',
     });
 
   //Hash password
