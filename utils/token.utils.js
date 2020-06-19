@@ -51,7 +51,7 @@ module.exports = {
 
   sendToken: function(req, res) {
 
-      if(req.register==false){
+      if(req.auth.register==false){
         message='user found & logged in'
       }
       else{
