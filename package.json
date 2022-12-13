@@ -17,7 +17,7 @@
     "crypto": "^1.0.1",
     "custom-id": "^1.2.0",
     "dotenv": "^8.2.0",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "helmet": "^3.23.0",
     "jsonwebtoken": "^8.5.1",
     "morgan": "^1.10.0",
